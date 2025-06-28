@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мій сайт</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>Це перша сторінка.</p>
+
+    <h2>Зображення</h2>
+    <img src="{{ url_for('static', filename='image.jpg') }}" width="500" height="300" alt="Приклад зображення">
+
+    <h2>Відео</h2>
+    <video width="500" controls>
+        <source src="{{ url_for('static', filename='video.mp4') }}" type="video/mp4">
+        Ваш браузер не підтримує відео.
+    </video>
+
+    <h2>Аудіо</h2>
+    <audio controls>
+        <source src="{{ url_for('static', filename='audio.mp3') }}" type="audio/mpeg">
+        Ваш браузер не підтримує аудіо.
+    </audio>
+</body>
+</html>
